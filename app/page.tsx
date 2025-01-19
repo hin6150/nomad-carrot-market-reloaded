@@ -1,29 +1,16 @@
 export default function Home() {
   return (
-    <main className="bg-gray-50 w-screen h-screen flex justify-center items-center">
-      <div className="flex flex-col rounded-xl shadow-xl p-4 w-fit gap-4 bg-white dark:bg-gray-700">
-        <div>
-          <div className="flex justify-between">
-            <div>
-              <p>In transit</p>
-              <p className="text-4xl font-bold">Coolblue</p>
-            </div>
-            <div className="bg-orange-400 rounded-full size-12"></div>
-          </div>
-        </div>
-        <div className="flex gap-3 items-center">
-          <div className="bg-green-500 rounded-2xl px-3 py-1">
-            <p className="text-white">TODAY</p>
-          </div>
-          <p className="font-bold">9:30-10:30u</p>
-        </div>
-        <div className="bg-gray-200 w-full h-2" />
-        <div className="flex gap-4">
-          <p>Expected</p>
-          <p>Sorting Center</p>
-          <p>In transit</p>
-          <p className="text-gray-400">Delivered</p>
-        </div>
+    <main className="flex h-screen w-screen items-center justify-center bg-gray-50">
+      <div className="flex w-1/2 flex-col gap-4 rounded-xl bg-white p-4 shadow-xl ring *:outline-none has-[:invalid]:ring-red-300 md:flex-row dark:bg-gray-700">
+        <input
+          placeholder="Search here"
+          type="text"
+          required
+          className="peer w-full rounded-full bg-gray-200 p-4 px-6 ring ring-transparent ring-offset-2 transition-shadow focus:ring-orange-400"
+        />
+        <button className="rounded-full bg-black px-10 py-3 text-white transition-transform hover:scale-90 peer-required:bg-red-500">
+          Search
+        </button>
       </div>
     </main>
   );
